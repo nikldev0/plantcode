@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(53, 255, 255);
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+  }
+      
+.navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    font-family: 'Archivo', sans-serif;
+}
+
+nav ul li {
+    padding: 1.3rem;
+    list-style: none;
+    font-family: 'Archivo', sans-serif;
+}
