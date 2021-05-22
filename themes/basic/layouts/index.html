@@ -1,0 +1,19 @@
+{{- define "main" }}
+<h2>{{.Title}}</h2>
+<main>
+  <article>{{.Content}}</article>
+  <ul>
+    <!-- Ranges through content/posts/*.md -->
+    {{ range .Pages }}
+    <li>
+      <div class="lead">
+        <a href="{{.Permalink}}">{{.Title}}</a>
+        <p>{{.Params.subtitle}}</p>
+      </div>
+      <p>{{.Date.Format "2006-01-02"}}</p>
+    </li>
+    {{ end }}
+  </ul>
+</main>
+
+{{ end }}

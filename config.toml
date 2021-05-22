@@ -1,0 +1,6 @@
+baseURL = "http:/"
+languageCode = "en-gb"
+title = "plantcode"
+theme = "basic"
+
+
