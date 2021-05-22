@@ -6,7 +6,7 @@
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
     <li>
-      {{ if ne .Title "About" }}
+      {{ if ne .Title "Me" }}
       <div class="lead">
         <a href="{{.Permalink}}">{{.Title}}</a>
         <p>{{.Params.subtitle}}</p>
