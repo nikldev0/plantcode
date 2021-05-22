@@ -1,6 +1,7 @@
-baseURL = "http:/"
-languageCode = "en-gb"
+baseURL = "/"
+languageCode = "en-us"
 title = "plantcode"
-theme = "basic"
+theme = "Basic"
+enableEmoji = true
 
 
