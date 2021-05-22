@@ -6,13 +6,14 @@
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
     <li>
+      {{ if ne .Title "About" }}
       <div class="lead">
         <a href="{{.Permalink}}">{{.Title}}</a>
         <p>{{.Params.subtitle}}</p>
       </div>
       <p>{{.Date.Format "2006-01-02"}}</p>
     </li>
-    {{ end }}
+    {{ end }} {{ end }}
   </ul>
 </main>
 
