@@ -6,3 +6,7 @@ subtitle: The tips and tricks that can get me focussing for up to 10 hours a day
 ---
 
 Yoooo mama
+
+{{< img src="typewriter.jpg" alt="image of vintage typewriter" >}}
+
+{{< img src="console.png" alt="image of vintage typewriter" >}}

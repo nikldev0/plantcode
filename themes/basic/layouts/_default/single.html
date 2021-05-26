@@ -1,23 +1,9 @@
 {{ define "main" }}
 <h1>{{.Title}}</h1>
 <h2>Estimated reading time: {{.ReadingTime}}mins</h2>
-    {{ $present := .Title }}
-{{if eq $present "About"}} 
-    <p>this is the About page</p> 
-{{else}}
-    <p>this is not the About page, this is the {{.Title}} page</p>
-{{ end }} 
-{{ with .Description }}
-    {{ . }}
-{{ else }}
-    {{ .Title }}
-{{ end }}
-{{ with .Resources.ByType "image" }}
-{{ range . }}
-<img src="{{ .RelPermalink }}" title="A Hermes 3000 Typewriter" alt="A Hermes 3000 Typewriter">
-{{ end }}
-{{ end }}
-{{ .Content }}
-{{ end }}{{- /* end main */ -}}
+{{ with .Params.Subtitle }} {{ . }} {{ else }} {{ .Description }} {{ end }} 
 
+<article>{{.Content }} </article>
 
+{{ end }}
+{{- /* end main */ -}}
