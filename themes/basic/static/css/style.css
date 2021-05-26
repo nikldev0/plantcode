@@ -38,10 +38,6 @@ header {
   text-decoration-skip-ink: auto;
 }
 
-nav {
-  display: none;
-}
-
 nav ul {
   display: flex;
 }
@@ -95,7 +91,8 @@ main li .date {
   font-style: normal;
 }
 
-main .about {
+main .about,
+.home {
   margin-bottom: 4em;
   padding-bottom: 2em;
   border-bottom: 1px solid #000;
