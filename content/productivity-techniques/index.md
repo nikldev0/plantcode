@@ -10,3 +10,11 @@ Yoooo mama
 {{< img src="typewriter.jpg" alt="image of vintage typewriter" >}}
 
 {{< img src="console.png" alt="image of vintage typewriter" >}}
+
+```javascript
+document.getElementById("demo").innerHTML = 5 * 10;
+document.getElementById("demo").innerHTML = 5 * 10;
+document.getElementById("demo").innerHTML = 5 * 10;
+document.getElementById("demo").innerHTML = 5 * 10;
+document.getElementById("demo").innerHTML = 5 * 10;
+```

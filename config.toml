@@ -3,5 +3,5 @@ languageCode = "en-us"
 title = "plantcode"
 theme = "Basic"
 enableEmoji = true
-
+pygmentsUseClasses =  true
 
