@@ -1,9 +1,18 @@
 {{ define "main" }}
-<h1>{{.Title}}</h1>
-<h2>Estimated reading time: {{.ReadingTime}}mins</h2>
-{{ with .Params.Subtitle }} {{ . }} {{ else }} {{ .Description }} {{ end }} 
+<h1 class="blogTitle">{{.Title}}</h1>
+<div class="metaData">
+  <h2 class="readTime">Reading time: ~<strong>{{.ReadingTime}}mins</strong></h2>
+  <p class="blogDate">{{.Date.Format "Jan-02-06"}}</p>
+</div>
+{{ with .Params.Subtitle }} {{ . }} {{ else }} {{ .Description }} {{ end }}
 
-<article>{{.Content }} </article>
+<article class="singleContent">
+  {{.Content }}
+  <span class="tags">
+    tags:
+    {{ range .Params.tags }}
+    <a class="tag" href="/tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+  </span>
+</article>
 
-{{ end }}
-{{- /* end main */ -}}
+{{ end }} {{- /* end main */ -}}

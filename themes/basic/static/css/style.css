@@ -6,6 +6,7 @@
 
 html {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 body {
@@ -38,10 +39,6 @@ header {
   text-decoration-skip-ink: auto;
 }
 
-nav ul {
-  display: flex;
-}
-
 nav ul li {
   padding: 1rem;
   list-style: none;
@@ -52,13 +49,21 @@ nav a {
 }
 
 article a {
-  background-color: rgb(236, 206, 169);
+  background-color: rgb(187, 214, 255);
 }
 
-main h1,
 main li {
   font-weight: 600;
   font-style: italic;
+}
+
+main li a {
+  font-size: 1.6rem;
+  margin-right: 0.4rem;
+}
+
+main .date {
+  font-size: 1rem;
 }
 
 main ul {
@@ -96,7 +101,8 @@ main li .date {
 }
 
 main .about,
-.home {
+.home,
+.singleContent {
   margin-bottom: 4em;
   padding-bottom: 2em;
   border-bottom: 1px solid #000;
@@ -117,8 +123,34 @@ main p {
   font-size: 1.13rem;
 }
 
+.blogTitle {
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.readTime {
+  font-weight: 200;
+  font-style: normal;
+  margin-right: 2rem;
+}
+
+main .metaData {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  font-size: 0.7rem;
+  font-weight: 200;
+  font-style: normal;
+}
+
+main .blogDate {
+  font-size: 1rem;
+}
+
 footer {
   text-align: center;
+  padding-bottom: 2em;
 }
 
 /* Medium Screens i.e Tablets etc. media queries */
@@ -138,7 +170,11 @@ footer {
     padding: 0em;
   }
 
-  nav {
-    display: block;
+  main li a {
+    font-size: 2rem;
+  }
+
+  main .date {
+    font-size: 0.6em;
   }
 }

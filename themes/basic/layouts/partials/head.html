@@ -3,7 +3,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content="Hugo 0.82.0" />
-  <title>{{.Site.Title}}</title>
+  {{ if .IsHome}}
+  <title>{{.Site.Title}} | Nikhil.K </title>
+  {{else}}
+  <title>{{.Title}} | {{.Site.Title}}</title>
+  {{end}}
   <link rel= "stylesheet" href= "{{ "css/style.css"| relURL }}"> <link rel=
   "stylesheet" href= "{{ "css/syntax.css"| relURL }}">
   <link rel="preconnect" href="https://fonts.gstatic.com" />

@@ -1,7 +1,5 @@
 {{- define "main" }}
-<h2>{{.Title}}</h2>
 <main class="home">
-  <article>{{.Content}}</article>
   <ul>
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
