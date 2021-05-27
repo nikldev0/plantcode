@@ -1,0 +1,20 @@
+{
+  "name": "replicator",
+  "version": "1.0.0",
+  "description": "My dev blog",
+  "private": true,
+  "scripts": {
+    "build": "hugo --cleanDestinationDir",
+    "hugo-server": "hugo server --disableFastRender"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikldev0/plantcode.git"
+  },
+  "author": "Nikhil K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikldev0/plantcode/issues"
+  },
+  "homepage": "https://github.com/nikldev0/plantcode#readme"
+}

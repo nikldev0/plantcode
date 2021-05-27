@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compilers on plantcode</title>
+    <link>/tags/compilers/</link>
+    <description>Recent content in compilers on plantcode</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 27 May 2021 08:24:46 +0100</lastBuildDate><atom:link href="/tags/compilers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastering the TypeScript Compiler</title>
+      <link>/mastering-the-typescript-compiler/</link>
+      <pubDate>Thu, 27 May 2021 08:24:46 +0100</pubDate>
+      
+      <guid>/mastering-the-typescript-compiler/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus labore consequuntur quo! Asperiores temporibus itaque consequatur quas, qui architecto, odit, et expedita recusandae ducimus vitae ipsam alias modi earum nemo incidunt odio velit labore explicabo dolores accusamus autem ea.
+Officiis ut sit exercitationem obcaecati laborum ratione! Ipsam beatae ratione iste, voluptatibus inventore minima cupiditate tempore ab quae facere vitae, blanditiis quia adipisci nemo. Corporis, veritatis facere! Quidem ad debitis asperiores explicabo saepe hic blanditiis recusandae delectus laudantium consequuntur cumque corrupti assumenda, maiores eum aspernatur quaerat sapiente natus?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,20 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/work/</loc>
-    <lastmod>2021-05-01T19:43:38+01:00</lastmod>
+    <loc>/categories/frontend/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/contact/</loc>
-    <lastmod>2021-05-01T11:34:59+01:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/about/</loc>
+    <loc>/tags/compilers/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>/mastering-the-typescript-compiler/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>/tags/typescript/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>/hugo-workflow-for-beginners/</loc>
+    <lastmod>2021-05-08T19:19:34+01:00</lastmod>
+  </url><url>
+    <loc>/productivity-techniques/</loc>
+    <lastmod>2021-05-08T13:04:00+01:00</lastmod>
+  </url><url>
+    <loc>/me/</loc>
     <lastmod>2021-05-01T10:55:20+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
-    <priority>0</priority>
-  </url><url>
-    <loc>http://example.org/categories/</loc>
-  </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>/</loc>
+    <lastmod>2021-05-01T10:55:20+01:00</lastmod>
   </url>
 </urlset>
