@@ -5,14 +5,13 @@ draft: false
 subtitle: The tips and tricks that can get me focussing for up to 10 hours a day.
 ---
 
+
+{{< figure src="./images/console.png" alt="heello"  caption="the end is near" >}}
+
 Yoooo mama
 
-
-
-
 ```javascript
-document.getElementById("demo")
-.innerHTML = 5 * 10;
+document.getElementById("demo").innerHTML = 5 * 10;
 document.getElementById("demo").innerHTML = 5 * 10;
 document.getElementById("demo").innerHTML = 5 * 10;
 document.getElementById("demo").innerHTML = 5 * 10;
