@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en-us"
+languageCode = "en-gb"
 title = "plantcode"
 theme = "Basic"
 enableEmoji = true
