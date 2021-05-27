@@ -4,7 +4,6 @@
   <h2 class="readTime">Reading time: ~<strong>{{.ReadingTime}}mins</strong></h2>
   <p class="blogDate">{{.Date.Format "Jan-02-06"}}</p>
 </div>
-{{ with .Params.Subtitle }} {{ . }} {{ else }} {{ .Description }} {{ end }}
 
 <article class="singleContent">
   {{.Content }}
