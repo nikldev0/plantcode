@@ -1,4 +1,4 @@
-baseURL = "https://github.com/nikldev0/plantcode"
+baseURL = "/"
 languageCode = "en-us"
 title = "plantcode"
 theme = "hope"
