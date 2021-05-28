@@ -1,0 +1,10 @@
+{
+  "name": "plantcode",
+  "version": "1.0.0",
+  "description": "My dev blog",
+  "private": true,
+  "scripts": {
+    "build": "hugo --cleanDestinationDir",
+    "hugo-server": "hugo server --disableFastRender"
+  }
+}
