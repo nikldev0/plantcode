@@ -1,7 +1,7 @@
 baseURL = "https://github.com/nikldev0/plantcode"
 languageCode = "en-us"
 title = "plantcode"
-theme = ["Basic"]
+theme = "hope"
 enableEmoji = true
 pygmentsUseClasses =  true
 
