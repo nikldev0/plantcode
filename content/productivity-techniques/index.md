@@ -1,19 +1,9 @@
 ---
-title: "Productivity Techniques"
-date: 2021-05-08T13:04:00+01:00
+title: "All the Git mistakes I've made"
+date: 2021-05-20T13:04:00+01:00
 draft: false
-subtitle: The tips and tricks that can get me focussing for up to 10 hours a day.
+subtitle: And how I'm trying to avoid them.
 ---
 
+Getting to grips with the feature branching workflow.
 
-{{< figure src="./images/console.png" alt="heello"  caption="the end is near" >}}
-
-Yoooo mama
-
-```javascript
-document.getElementById("demo").innerHTML = 5 * 10;
-document.getElementById("demo").innerHTML = 5 * 10;
-document.getElementById("demo").innerHTML = 5 * 10;
-document.getElementById("demo").innerHTML = 5 * 10;
-document.getElementById("demo").innerHTML = 5 * 10;
-```
