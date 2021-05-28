@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "plantcode"
-theme = "Basic"
+theme = ["Basic"]
 enableEmoji = true
 pygmentsUseClasses =  true
 
