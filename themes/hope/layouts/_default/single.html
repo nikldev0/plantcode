@@ -1,8 +1,8 @@
 {{ define "main" }}
 <h1 class="blogTitle">{{.Title}}</h1>
 <div class="metaData">
-  <h2 class="readTime">Reading time: ~<strong>{{.ReadingTime}}mins</strong></h2>
-  <p class="blogDate">{{.Date.Format "Jan-02-06"}}</p>
+  <p class="readTime">Reading time: ~<strong>{{.ReadingTime}}mins</strong></p>
+  <p>{{.Date.Format "Jan-02-06"}}</p>
 </div>
 
 <article class="singleContent">

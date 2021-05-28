@@ -76,11 +76,10 @@ header {
   margin-bottom: 1em;
 }
 
-
 .home a {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-right: 0.4rem;
   font-style: italic;
   font-weight: 600;
@@ -99,9 +98,44 @@ header {
   border-bottom: 1px solid #000;
 }
 
+/* Taxonomy */
 
-/* General main styling */
+.taxonomy {
+  padding: 0;
+}
 
+.taxonomy .lead {
+  display: flex;
+  flex-direction: column;
+}
+
+.taxonomy .lead p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.taxonomy li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1em;
+}
+
+.taxonomy a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-right: 0.4rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.taxonomy .date {
+  font-size: 1rem;
+  font-weight: 100;
+}
+
+/* Universal main styling */
 
 main a {
   color: rgb(0, 0, 0);
@@ -126,24 +160,13 @@ article a {
 
 .singleContent ol,
 .singleContent ul {
-  border: 2px solid red;
-  list-style-type: decimal;
-  padding: 0;
   margin: 0;
+  padding-left: 1.2rem;
 }
 
-main .singleContent li {
-  font-weight: 200;
+.singleContent li {
   font-style: normal;
-  font-size: 1.4rem;
-}
-
-main .singleContent li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  margin-bottom: 1em;
-  border: 2px solid rgb(143, 143, 143);
+  font-size: 1.13rem;
 }
 
 .blogTitle {
@@ -158,23 +181,24 @@ main .singleContent li {
   margin-right: 2rem;
 }
 
-main .metaData {
+.metaData {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  font-size: 0.7rem;
-  font-weight: 300;
-  font-style: normal;
 }
 
-main .blogDate {
+.metaData p {
   font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
 }
 
 figure img {
   max-width: 100%;
   height: auto;
 }
+
+/* Footer */
 
 footer {
   text-align: center;
@@ -186,7 +210,10 @@ footer {
 @media only screen and (min-width: 577px) and (max-width: 991px) {
   .container {
     max-width: 720px;
-    padding: 0em;
+  }
+
+  .home a {
+    font-size: 1.7rem;
   }
 }
 
@@ -198,8 +225,8 @@ footer {
     padding: 0em;
   }
 
-  main .date {
-    font-size: 0.6em;
+  .home .date {
+    font-size: 1.13rem;
   }
 
   .home a {
