@@ -1,1 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>/categories/frontend/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/categories/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/tags/compilers/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/mastering-the-typescript-compiler/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/tags/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/tags/typescript/</loc><lastmod>2021-05-27T08:24:46+01:00</lastmod></url><url><loc>/hugo-workflow-for-beginners/</loc><lastmod>2021-05-08T19:19:34+01:00</lastmod></url><url><loc>/productivity-techniques/</loc><lastmod>2021-05-08T13:04:00+01:00</lastmod></url><url><loc>/me/</loc><lastmod>2021-05-01T10:55:20+01:00</lastmod></url><url><loc>/</loc><lastmod>2021-05-01T10:55:20+01:00</lastmod></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://github.com/nikldev0/plantcode/categories/frontend/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/categories/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/tags/compilers/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/mastering-the-typescript-compiler/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/tags/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/tags/typescript/</loc>
+    <lastmod>2021-05-27T08:24:46+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/hugo-workflow-for-beginners/</loc>
+    <lastmod>2021-05-08T19:19:34+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/productivity-techniques/</loc>
+    <lastmod>2021-05-08T13:04:00+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/me/</loc>
+    <lastmod>2021-05-01T10:55:20+01:00</lastmod>
+  </url><url>
+    <loc>https://github.com/nikldev0/plantcode/</loc>
+    <lastmod>2021-05-01T10:55:20+01:00</lastmod>
+  </url>
+</urlset>
