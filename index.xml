@@ -1,41 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>plantcode | Nikhil.K on plantcode</title>
-    <link>/</link>
-    <description>Recent content in plantcode | Nikhil.K on plantcode</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sat, 01 May 2021 10:55:20 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mastering the TypeScript Compiler</title>
-      <link>/mastering-the-typescript-compiler/</link>
-      <pubDate>Thu, 27 May 2021 08:24:46 +0100</pubDate>
-      
-      <guid>/mastering-the-typescript-compiler/</guid>
-      <description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus labore consequuntur quo! Asperiores temporibus itaque consequatur quas, qui architecto, odit, et expedita recusandae ducimus vitae ipsam alias modi earum nemo incidunt odio velit labore explicabo dolores accusamus autem ea.
-Officiis ut sit exercitationem obcaecati laborum ratione! Ipsam beatae ratione iste, voluptatibus inventore minima cupiditate tempore ab quae facere vitae, blanditiis quia adipisci nemo. Corporis, veritatis facere! Quidem ad debitis asperiores explicabo saepe hic blanditiis recusandae delectus laudantium consequuntur cumque corrupti assumenda, maiores eum aspernatur quaerat sapiente natus?</description>
-    </item>
-    
-    <item>
-      <title>Hugo Workflow for Beginners</title>
-      <link>/hugo-workflow-for-beginners/</link>
-      <pubDate>Sat, 08 May 2021 19:19:34 +0100</pubDate>
-      
-      <guid>/hugo-workflow-for-beginners/</guid>
-      <description>This doesn&amp;rsquo;t discount the fact that people all over the world suffer some kind of dystopian nightmare.</description>
-    </item>
-    
-    <item>
-      <title>Productivity Techniques</title>
-      <link>/productivity-techniques/</link>
-      <pubDate>Sat, 08 May 2021 13:04:00 +0100</pubDate>
-      
-      <guid>/productivity-techniques/</guid>
-      <description>the end is near
-Yoooo mama
-document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; </description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>plantcode | Nikhil.K on plantcode</title><link>/</link><description>Recent content in plantcode | Nikhil.K on plantcode</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 01 May 2021 10:55:20 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Mastering the TypeScript Compiler</title><link>/mastering-the-typescript-compiler/</link><pubDate>Thu, 27 May 2021 08:24:46 +0100</pubDate><guid>/mastering-the-typescript-compiler/</guid><description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus labore consequuntur quo! Asperiores temporibus itaque consequatur quas, qui architecto, odit, et expedita recusandae ducimus vitae ipsam alias modi earum nemo incidunt odio velit labore explicabo dolores accusamus autem ea.
+Officiis ut sit exercitationem obcaecati laborum ratione! Ipsam beatae ratione iste, voluptatibus inventore minima cupiditate tempore ab quae facere vitae, blanditiis quia adipisci nemo. Corporis, veritatis facere! Quidem ad debitis asperiores explicabo saepe hic blanditiis recusandae delectus laudantium consequuntur cumque corrupti assumenda, maiores eum aspernatur quaerat sapiente natus?</description></item><item><title>Hugo Workflow for Beginners</title><link>/hugo-workflow-for-beginners/</link><pubDate>Sat, 08 May 2021 19:19:34 +0100</pubDate><guid>/hugo-workflow-for-beginners/</guid><description>This doesn&amp;rsquo;t discount the fact that people all over the world suffer some kind of dystopian nightmare.</description></item><item><title>Productivity Techniques</title><link>/productivity-techniques/</link><pubDate>Sat, 08 May 2021 13:04:00 +0100</pubDate><guid>/productivity-techniques/</guid><description>
+the end is near
+Yoooo mama
+document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = 5 * 10;</description></item></channel></rss>
