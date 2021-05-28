@@ -1,3 +1,5 @@
+/* Mobile first CSS */
+
 *,
 ::after,
 ::before {
@@ -24,6 +26,8 @@ body {
   padding-left: 1em;
 }
 
+/* Navigation */
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -34,6 +38,14 @@ body {
   text-decoration: none;
 }
 
+.navigation li {
+  padding: 1rem;
+  list-style: none;
+  font-size: 1.2em;
+}
+
+/* nav logo */
+
 header {
   text-decoration: underline;
   text-decoration-color: rgb(120, 90, 255, 0.6);
@@ -41,74 +53,55 @@ header {
   text-decoration-skip-ink: auto;
 }
 
-nav ul li {
-  padding: 1rem;
-  list-style: none;
-}
+/* homepage  */
 
-nav a {
-  font-size: 1.2em;
-}
-
-article a {
-  background-color: rgb(187, 214, 255);
-}
-
-main li {
-  font-weight: 600;
-  font-style: italic;
-}
-
-main li a {
-  font-size: 1.6rem;
-  margin-right: 0.4rem;
-}
-
-main .date {
-  font-size: 1rem;
-}
-
-main ul {
-  list-style: none;
+.home ul {
   padding: 0;
-  font-size: 2em;
 }
 
-main .lead {
+.home .lead {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
-main .lead p {
-  font-size: 0.5em;
+.home .lead p {
+  font-size: 1rem;
   font-weight: 300;
-  font-style: normal;
 }
 
-main li {
+.home li {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 1em;
 }
 
-main li p {
+
+.home a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-right: 0.4rem;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.home .date {
+  font-size: 1rem;
   font-weight: 100;
-  font-size: 0.6em;
 }
 
-main li .date {
-  font-style: normal;
-}
-
-main .about,
+.about,
 .home,
 .singleContent {
   margin-bottom: 4em;
   padding-bottom: 2em;
   border-bottom: 1px solid #000;
 }
+
+
+/* General main styling */
+
 
 main a {
   color: rgb(0, 0, 0);
@@ -123,6 +116,34 @@ main a:hover {
 
 main p {
   font-size: 1.13rem;
+}
+
+/* single pages */
+
+article a {
+  background-color: rgb(187, 214, 255);
+}
+
+.singleContent ol,
+.singleContent ul {
+  border: 2px solid red;
+  list-style-type: decimal;
+  padding: 0;
+  margin: 0;
+}
+
+main .singleContent li {
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+main .singleContent li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 1em;
+  border: 2px solid rgb(143, 143, 143);
 }
 
 .blogTitle {
@@ -177,11 +198,11 @@ footer {
     padding: 0em;
   }
 
-  main li a {
-    font-size: 2rem;
-  }
-
   main .date {
     font-size: 0.6em;
+  }
+
+  .home a {
+    font-size: 2rem;
   }
 }
