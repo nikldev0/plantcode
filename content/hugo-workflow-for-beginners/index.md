@@ -9,4 +9,5 @@ tags:
   - workflow
 ---
 
-This doesn't discount the fact that people all over the world suffer some kind of dystopian [nightmare](https://docs.netlify.com/configure-builds/common-configurations/hugo/).
+The `hugo list drafts` command is useful.
+
