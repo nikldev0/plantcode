@@ -102,6 +102,9 @@ header {
 
 .taxonomy {
   padding: 0;
+  margin-bottom: 4em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #000;
 }
 
 .taxonomy .lead {
@@ -136,6 +139,7 @@ header {
 }
 
 /* Universal main styling */
+
 
 main a {
   color: rgb(0, 0, 0);
