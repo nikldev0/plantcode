@@ -36,6 +36,12 @@ body {
 
 .navigation a {
   text-decoration: none;
+  color: #1d1dff;
+}
+
+.navigation a:active {
+  text-decoration: none;
+  color: #ff4b1e;
 }
 
 .navigation li {
@@ -139,7 +145,6 @@ header {
 }
 
 /* Universal main styling */
-
 
 main a {
   color: rgb(0, 0, 0);
