@@ -34,7 +34,7 @@ body {
   align-items: baseline;
 }
 
-.navigation a {
+.navigation a, .navigation a:visited  {
   text-decoration: none;
   color: #1d1dff;
 }
