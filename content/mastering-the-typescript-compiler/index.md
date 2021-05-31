@@ -99,23 +99,7 @@ In your terminal window:
 >>
 ```
 
-## How are types bound?
-
-Dynamic type binding means that JavaScript needs to actually run your
-program to know the types of things in it. JavaScript doesn’t know your
-types before running your program.
-
-TypeScript is a _gradually typed_ language.
-
-That means that TypeScript works best when it knows the types of everything in your program at
-compile time, but it doesn’t have to know every type in order to compile
-your program. Even in an untyped program TypeScript can infer some types
-for you and catch some mistakes, but without knowing the types for
-everything, it will let a lot of mistakes slip through to your users.
-
-This gradual typing is really useful for migrating legacy codebases from
-untyped JavaScript to typed TypeScript, but unless you’re in the middle
-of migrating your codebase, you should aim for 100% type coverage.
+[tsconfigdemystified](https://generator.tsconfigdemystified.com/) is an excellent resource interactively outlines what you're missing different values for your tsconfig.json file do.
 
 ## Configure your linter
 
@@ -145,7 +129,7 @@ of migrating your codebase, you should aim for 100% type coverage.
 >>
 ```
 
-Include Prettier:
+Include Prettier (you may need to [install another config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#usage-with-prettier)):
 
 ```typescript
 >> //.eslintrc.js
@@ -224,6 +208,61 @@ Include Prettier:
 
 {{< figure src="eslint-enable.png" caption="Enable the ESLint extension" >}}
 
+## Using ts-node
+
+`ts-node`  allows you to compile and run your TypeScript with a single command.
+
+run:  
+
+`npm install -D ts-node`   
+
+to install the package locally in your project. 
+
+If required, you can fetch the types associated with the project by running:
+
+`npm install -D tslib @types/node`
+
+You may then run:  
+
+`npm i -D nodemon`  
+
+[nodemon](https://github.com/remy/nodemon) allows you to watch for any changes in your node.js application and automatically restart your server. This is crucial for streamlining TypeScript workflow.
+
+You can then set up the following npm scripts in your package.json folder:
+
+```typescript
+>> //package.json
+>>
+>> "scripts": {
+>>  "start": "node dist/index.js",
+>>  "dev": "nodemon src/index.ts",
+>>  "build": "tsc -p .",
+>>  "test": "echo \"Error: no test specified\" && exit 1"
+>> }
+>>
+>>
+>>
+>>
+```
+
+Any changes you make to your TypeScript file can be seen in the terminal when you run `npm run dev`. 
+
+If you would like to render the JavaScript file, simply run  `npm run build`  to allow TypeScript to compile, and then  `npm run start`  to see the rendered JavaScript in your terminal.
+
+
+
 ### References
 
-https://medium.com/@dinis.cruz/ast-abstract-syntax-tree-538aa146c53b
+https://medium.com/@dinis.cruz/ast-abstract-syntax-tree-538aa146c53b  
+
+
+
+
+
+
+
+
+
+
+
+
