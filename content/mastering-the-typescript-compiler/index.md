@@ -22,7 +22,7 @@ To summarise, the steps are:
 - Program is parsed into an AST
 - AST is compiled into bytecode
 - Bytecode is evaluated by the runtime
-  
+
 Where TypeScript is special is that instead of compiling straight to bytecode, TypeScript compiles to...JavaScript code!
 
 Just before TypeScript does this, so after it generates an AST for your program but before it emits code, the TypeScript compiler makes your code safer by ✨typechecking✨ your code.
@@ -45,12 +45,13 @@ let c = [true, false];
 
 If you leave off the annotations, TypeScript is pretty good at inferring types for you. It's generally good practice to keep explicitly typed code at a minimum [according to most style guides](https://google.github.io/styleguide/tsguide.html#type-and-non-nullability-assertions).
 
-| Type system feature  | JavaScript  | TypeScript |
+
+| Type system feature | JavaScript | TypeScript |
 | -------------------- | ----------- | ---------- |
 | How are types bound? | Dynamically | Statically |
-|                      |             |            |
-|                      |             |            |
-|                      |             |            |
+| Are types automatically converted? | Yes | No (mostly) |
+| | | |
+| | | |
 
 In your terminal window:
 
