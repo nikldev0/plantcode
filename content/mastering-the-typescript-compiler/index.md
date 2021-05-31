@@ -201,23 +201,17 @@ Include Prettier:
 - Expect to see the following dev dependencies installed in your `package.json` file.
 
 ```typescript
->> //.eslintrc.js
+>> //package.json
 >>
->> module.exports = {
->>   root: true,
->>   parser: '@typescript-eslint/parser',
->>   plugins: [
->>    '@typescript-eslint',
->>   ],
->>   extends: [
->>    'eslint:recommended',
->>    'plugin:@typescript-eslint/recommended',
->>     "prettier",
->>   ],
->>   env: {
->>    node: true,
->>  },
->> };
+>> "devDependencies": {
+>>   "@types/node": "^15.6.1",
+>>   "@typescript-eslint/eslint-plugin": "^4.25.0",
+>>   "@typescript-eslint/parser": "^4.25.0",
+>>   "eslint": "^7.27.0",
+>>   "eslint-config-prettier": "^8.3.0",
+>>   "tslint": "^6.1.3",
+>>   "typescript": "^4.3.2"
+>> }
 >>
 >>
 >>
