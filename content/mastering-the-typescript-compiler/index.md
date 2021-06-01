@@ -59,12 +59,12 @@ let c = [true, false];
 
 If you leave off the annotations, TypeScript is pretty good at inferring types for you. It's generally good practice to keep explicitly typed code at a minimum [according to most style guides](https://google.github.io/styleguide/tsguide.html#type-and-non-nullability-assertions).
 
-| Type system feature                | JavaScript  | TypeScript  |
-| ---------------------------------- | ----------- | ----------- |
-| How are types bound?               | Dynamically | Statically  |
-| Are types automatically converted? | Yes         | No (mostly) |
-|                                    |             |             |
-|                                    |             |             |
+| Type system feature                | JavaScript          | TypeScript               |
+| ---------------------------------- | ------------------- | ------------------------ |
+| How are types bound?               | Dynamically         | Statically               |
+| Are types automatically converted? | Yes                 | No (mostly)              |
+| When are types checked?            | At runtime          | At compile time          |
+| When are errors surfaced?          | At runtime (mostly) | At compile time (mostly) |
 
 TypeScript is [gradually typed](https://wphomes.soic.indiana.edu/jsiek/what-is-gradual-typing/) because it uses a type system where you can explicity annotate your types, or you can let TypeScript infer most of them for you. You should aim for 100% type coverage because TypeScript works best when it knows the types of everything in your program at compile time, but it doesn't have to know every type in order to compile your program.
 
@@ -210,21 +210,21 @@ Include Prettier (you may need to [install another config](https://github.com/ty
 
 ## Using ts-node
 
-`ts-node`  allows you to compile and run your TypeScript with a single command.
+`ts-node` allows you to compile and run your TypeScript with a single command.
 
-run:  
+run:
 
-`npm install -D ts-node`   
+`npm install -D ts-node`
 
-to install the package locally in your project. 
+to install the package locally in your project.
 
 If required, you can fetch the types associated with the project by running:
 
 `npm install -D tslib @types/node`
 
-You may then run:  
+You may then run:
 
-`npm i -D nodemon`  
+`npm i -D nodemon`
 
 [nodemon](https://github.com/remy/nodemon) allows you to watch for any changes in your node.js application and automatically restart your server. This is crucial for streamlining TypeScript workflow.
 
@@ -245,24 +245,10 @@ You can then set up the following npm scripts in your package.json folder:
 >>
 ```
 
-Any changes you make to your TypeScript file can be seen in the terminal when you run `npm run dev`. 
+Any changes you make to your TypeScript file can be seen in the terminal when you run `npm run dev`.
 
-If you would like to render the JavaScript file, simply run  `npm run build`  to allow TypeScript to compile, and then  `npm run start`  to see the rendered JavaScript in your terminal.
-
-
+If you would like to render the JavaScript file, simply run `npm run build` to allow TypeScript to compile, and then `npm run start` to see the rendered JavaScript in your terminal.
 
 ### References
 
-https://medium.com/@dinis.cruz/ast-abstract-syntax-tree-538aa146c53b  
-
-
-
-
-
-
-
-
-
-
-
-
+https://medium.com/@dinis.cruz/ast-abstract-syntax-tree-538aa146c53b
