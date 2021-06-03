@@ -39,6 +39,23 @@ Bicep does not like single-line objects or single-line arrays.
 
 Square brackets are for invoking functions within ARM templates. We can use these functions to parametrize our templates and these are evaluated during deployment.
 
+The reason you cannot use concat in bicep is because it's not recommended by the spec. Here you can see the [differences between ARM Template syntax and the native Bicep equivalent](https://github.com/Azure/bicep/blob/main/docs/arm2bicep.md).
+
+For [retriving storage access keys](https://blog.eldert.net/retrieve-azure-storage-access-keys-in-arm-template/) in an ARM template.
+
+The listkeys function requires two inputs, the resource ID of the Storage account and the API version to use. We retrieve the resource ID using the resourceId function, while the API version is available for reference on Microsoft Docs.
+
+The date calls a static API version, and then we can add this to retrieve the primary key during the creation of the API connection. 
+
+### Dealing with Microsoft.Logic Templates
+
+[WorkflowProperties](https://docs.microsoft.com/en-us/azure/templates/microsoft.logic/2019-05-01/workflows?tabs=json#workflowproperties-object) object.
+
+If you set the logicapp state property to the “Disabled” state, the LA will not start unless you specifically activate it. Therefore we set it as enabled for it to automatically run.
+
+
+
+
 ## Key Resources
 
 1. When creating Azure Resource Manager templates (ARM templates), you need to understand what resource types are available, and what values to use in your template. The ARM template reference documentation provides these values.
@@ -55,7 +72,8 @@ Mandatory properties will have 'required' beside them.
 
 https://github.com/Azure/azure-quickstart-templates
 
-3. 
+3. To learn more about parameters syntax in bicep, including how to add metadata, this is an excellent resource: https://ravichaganti.com/blog/bicep-basics-beyond-basics-parameters/
+
 
 ## List of useful az commands
 
