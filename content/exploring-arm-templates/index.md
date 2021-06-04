@@ -41,6 +41,8 @@ Square brackets are for invoking functions within ARM templates. We can use thes
 
 The reason you cannot use concat in bicep is because it's not recommended by the spec. Here you can see the [differences between ARM Template syntax and the native Bicep equivalent](https://github.com/Azure/bicep/blob/main/docs/arm2bicep.md).
 
+[If conditions are not supported in Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions-logical#if). 
+
 For [retriving storage access keys](https://blog.eldert.net/retrieve-azure-storage-access-keys-in-arm-template/) in an ARM template.
 
 The listkeys function requires two inputs, the resource ID of the Storage account and the API version to use. We retrieve the resource ID using the resourceId function, while the API version is available for reference on Microsoft Docs.
@@ -52,6 +54,15 @@ The date calls a static API version, and then we can add this to retrieve the pr
 [WorkflowProperties](https://docs.microsoft.com/en-us/azure/templates/microsoft.logic/2019-05-01/workflows?tabs=json#workflowproperties-object) object.
 
 If you set the logicapp state property to the “Disabled” state, the LA will not start unless you specifically activate it. Therefore we set it as enabled for it to automatically run.
+
+az ad sp create-for-rbac --name "githubactionazure" --role contributor --scopes <Resource ID>
+--sdk-authentication
+
+Creates a new sp in your azure ad and give it contributor on that resource group, and then spin out some JSON which has a client secret which is what we're going to use within GitHub as my secret.
+
+In Resource Group -> Properties you've got "Resource ID", which is the path to the RG
+
+https://portal.azure.com/#blade>/resource/<Resource ID>
 
 
 

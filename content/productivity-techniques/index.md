@@ -14,4 +14,5 @@ Getting to grips with the feature branching workflow.
 5. `git log --stat` will show you the files that were changed in the commit.
 6. Intention without strategy is chaos.
 7. VSC is no replacement for communication.
+8. `git remote show origin` 
    
