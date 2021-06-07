@@ -3,7 +3,7 @@ title: "Exploring ARM Templates"
 date: 2021-06-01T20:49:16+01:00
 draft: false
 subtitle: "Transpiling ARM to Bicep"
-categories: -undefined
+categories: undefined
 tags:
   - ARM
   - Azure
