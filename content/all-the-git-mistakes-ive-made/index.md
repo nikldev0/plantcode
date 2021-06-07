@@ -2,6 +2,7 @@
 title: "All the Git mistakes I've made"
 date: 2021-05-20T13:04:00+01:00
 draft: false
+banner: "https://hugo-og-73w37x2fd-nikldev0.vercel.app/**All%20the%20Git%20mistakes%20I've%20made**%20%F0%9F%8C%BF%20plantcode%20.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg&widths=auto"
 subtitle: And how I'm trying to avoid them.
 ---
 
