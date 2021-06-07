@@ -15,4 +15,7 @@ Getting to grips with the feature branching workflow.
 6. Intention without strategy is chaos.
 7. VSC is no replacement for communication.
 8. `git remote show origin` 
+9. Only rebase commits that you have not shared with others, otherwise bad things will happen. You don't want to rebase something you already pushed for others to work with.
+10. [Useful resource](https://stackoverflow.com/questions/10588291/git-branching-master-vs-origin-master-vs-remotes-origin-master?noredirect=1&lq=1) to understand all the remote branches `git branch -a` gives you.
+11. The goal of both merging and rebasing is to take commits from a feature branch and put them on a master branch. 
    
