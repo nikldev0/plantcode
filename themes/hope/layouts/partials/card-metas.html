@@ -1,12 +1,12 @@
 <!--  Essential META Tags -->
 
-<meta property="title" content="{{- .Title -}}" />
+<meta property="title" content="{{if .IsHome}}{{- .Site.Title -}}{{else}}{{.Title }} | plantcode{{end}}" />
 <meta name="description" content="{{if .IsHome}}{{- .Site.Params.Description -}}{{else}}{{- .Description -}}{{end}}">
 <meta name="author" content="{{.Site.Params.author}}">
 
 <!--  Essential META Tags -->
 
-<meta property="og:title" content="{{- .Title -}} | plantcode" />
+<meta property="og:title" content="{{if .IsHome}}{{- .Site.Title -}}{{else}}{{.Title }} | plantcode{{end}}" />
 <meta property="og:description" content="{{if .IsHome}}{{- .Site.Params.Description -}}{{else}}{{- .Description -}}{{end}}" />
 <meta property="og:image" content="{{.Params.banner}}" />
 
