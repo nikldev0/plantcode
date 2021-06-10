@@ -2,7 +2,7 @@
 <main class="home">
   <ul>
     <!-- Ranges through content/posts/*.md -->
-    {{ range .Pages }}
+    {{ range .Site.RegularPages }}
     <li>
       {{ if ne .Title "Me" }}
       <div class="lead">
