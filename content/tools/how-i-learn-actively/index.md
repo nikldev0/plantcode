@@ -1,7 +1,7 @@
 ---
 title: "How I Learn Actively"
 date: 2021-06-13T17:18:02+01:00
-draft: false
+draft: true
 subtitle: ""
 categories: -undefined
 tags:
