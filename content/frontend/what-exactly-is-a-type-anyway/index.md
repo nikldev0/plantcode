@@ -99,25 +99,67 @@ Optional (?) isn’t the only modifier you can use when declaring object types. 
 
 ```typescript
 let user: {
-    readonly firstName: string
+  readonly firstName: string;
 } = {
-  firstName: 'abby'
-}
+  firstName: "abby",
+};
 
-user.firstName// string
-user.firstName='abbey with an e' // Error TS2540: Cannot assign to 'firstName' because it is a read-only property.
+user.firstName; // string
+user.firstName = "abbey with an e"; // Error TS2540: Cannot assign to 'firstName' because it is a read-only property.
 ```
+
 ### Type aliases
 
 Here we've declared a type alias 'Age' that points to a type `number`:
 
 ```typescript
-type Age = number
+type Age = number;
 
 type Person = {
-  name: string
-  age: age
-}
+  name: string;
+  age: age;
+};
 ```
 
+### Tuples
+
+Tuples are subtypes of array. They’re a **special way to type arrays that have fixed lengths**, where the values at each index have _specific_, _known_ types.
+
+Unlike most other types, tuples have to be explicitly typed when you declare them. That’s because the JavaScript syntax is the same for tuples and arrays (both use square brackets), and TypeScript already has rules for inferring array types from square brackets:
+
+```typescript
+let b: [string, string, number] 
+
+b = ['malcolm', 'gladwell', 1963] //this works fine and matches type
+
+b = ['queen', 'elizabeth', 'ii', 1926] // the third element is not matching type and it has one more element than the tuple length specifies
+```
+Tuples support optional elements and rest elements, which are sort of like [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) - they allow you to accept an indefinite amount of indexes into the array. Note the use of the triple full stop syntax.
+
+For example, if we wanted to create a heterogeneous list:
+
+```typescript
+let list: [number, boolean, ...string[]] = [1, false, 'a', 'b', 'c']
+```
+
+### Read-only arrays and tuples
+
+Regular arrays are mutable, sometimes you want an immutable array. For example you wouldn't want someone to accidently edit it and cause bugs. You can update a readonly array to produce a new array, leaving the original unchanged.
+
+To create a read-only array, use an explicit type annotation; to update a read-only array, use nonmutating methods like `.concat` and `.slice` instead of mutating ones like `.push` and `.splice`:
+
+```typescript
+let as: readonly number[] = [1, 2, 3]
+let bs: readonly number[] = as.concat(4)
+```
+
+### Functions
+
+For functions in TypeScript you will usually explicitly annotate function parameters (`a` and `b` in this example) -- TypeScript will always infer types throughout the body of your function, but in most cases it won't infer types for your parameters. The return type therefore *is* inferred, but you can explicitly annotate it too:
+
+```typescript
+function add(a: number, b: number): number {
+  return a + b
+}
+```
 
