@@ -74,7 +74,7 @@ TypeScript is [gradually typed](https://wphomes.soic.indiana.edu/jsiek/what-is-g
 
 In JavaScript, errors surface only once you run the code because JavaScript does its implicit type conversions at _runtime_.
 
-TypeScript on the other hand throws both syntax-related errors and type-related errors at compile time. This decreases the feedback loop between mistakes and fixes.
+TypeScript on the other hand throws both syntax-related errors and type-related errors at compile time.  In practice, that means those kinds of errors will show up in your code editor, right as you type. This decreases the feedback loop between mistakes and fixes.
 
 ## Get good at the tsc CLI 😎
 
