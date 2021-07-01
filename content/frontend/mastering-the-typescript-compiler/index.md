@@ -78,6 +78,14 @@ TypeScript on the other hand throws both syntax-related errors and type-related 
 
 ## Get good at the tsc CLI 😎
 
+First initialise a new NPM project (follow the prompts)
+
+`npm init`
+
+Install TSC, TSLint, and type declarations for NodeJS
+
+`npm install --save-dev typescript tslint @types/node`
+
 In your terminal window:
 
 ```typescript

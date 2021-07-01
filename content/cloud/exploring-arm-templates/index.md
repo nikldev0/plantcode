@@ -65,7 +65,9 @@ In Resource Group -> Properties you've got "Resource ID", which is the path to t
 
 https://portal.azure.com/#blade>/resource/<Resource ID>
 
+For `dependsOn` use the symbolic name of the resource rather than the resource name like the ARM template does.
 
+For the FAQ Chatbots deployment, you have to confirm the default values.
 
 
 ## Key Resources
@@ -85,6 +87,9 @@ Mandatory properties will have 'required' beside them.
 https://github.com/Azure/azure-quickstart-templates
 
 3. To learn more about parameters syntax in bicep, including how to add metadata, this is an excellent resource: https://ravichaganti.com/blog/bicep-basics-beyond-basics-parameters/
+   
+4. Another good blog resource: https://yashints.dev/blog/2021/05/10/from-arm-to-bicep#loops
+
 
 
 ## List of useful az commands

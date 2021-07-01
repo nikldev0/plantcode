@@ -163,3 +163,14 @@ function add(a: number, b: number): number {
 }
 ```
 
+### Getters and Setters
+
+To avoid checking all the time if a value assigned to a property is valid from user input, we use setters and getters. The getters and setters allow you to **control the access to the properties of a class**.
+
+For each property:
+
+- A getter method returns the value of the property’s value. A getter is also called an accessor. Keyword `get`.
+- A setter method updates the property’s value. A setter is also known as a mutator. Keyword `set`.
+
+Setters are useful when you want to validate the data before assigning it to the properties.
+
