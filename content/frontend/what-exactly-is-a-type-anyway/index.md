@@ -38,39 +38,43 @@ When working with long numbers, use numeric separators to make those numbers eas
 
 By default, TypeScript is pretty strict about object properties — if you say the object should have a property called `b` that’s a number, TypeScript expects b and only b. If b is missing, or if there are extra properties, TypeScript will complain.
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 let a: {b: number}
 
-a = {}  // Error TS2741: Property 'b' is missing in type '{}'// but required in type '{b: number}'.
+a = {} // Error TS2741: Property 'b' is missing in type '{}'
+// but required in type
+// '{b: number}'.
 
 a = {
   b: 1,
   c: 2
 }
 
-/* Error TS2322: Type '{b: number; c: number}' is not assignable} to type '{b: number}'. Object literal may only
-specify known properties,
-and 'c' does not exist in type '{b: number}' *\.
-```
+//_ Error TS2322: Type '{b: number; c: number}'
+// is not assignable} to type '{b: number}'.
+// Object literal may only
+// specify known properties,
+// and 'c' does not exist in type '{b: number}' _\.
+{{< / highlight >}}
 
 ### Definite Assignment
 
 When you declare a variable in one place and initialise it later, TypeScript will make sure that your variable is definitely assigned a value by the time you use it:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 let i: number;
-let j = i * 3; //Error TS2454: Variable 'i' is used before being assigned.
-```
+let j = i \* 3; //Error TS2454: Variable 'i' is used before being assigned.
+{{< / highlight >}}
 
 To tell TypeScript that something in an object is optional, or that there might be more properties than you planned for, you can use special syntax:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 let a: {
-  b: number;
-  c?: string;
-  [key: number]: boolean;
+b: number;
+c?: string;
+[key: number]: boolean;
 };
-```
+{{< / highlight >}}.
 
 1. `a` has a property `b` that's a `number`.
 2. `a` _might_ have a property `c` that's a `string`. And if `c` is set, it might be `undefined`.
@@ -86,40 +90,41 @@ There is one rule to keep in mind for index signatures: the index signature key�
 
 Also note that you can use any word for the index signature key’s name — it doesn’t have to be key:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 let airplaneSeatingAssignments: {
-  [seatNumber: string]: string;
+[seatNumber: string]: string;
 } = {
-  "34D": "Boris Cherny",
-  "34E": "Bill Gates",
+"34D": "Boris Cherny",
+"34E": "Bill Gates",
 };
-```
+{{< / highlight >}}
 
 Optional (?) isn’t the only modifier you can use when declaring object types. You can also mark fields as read-only (that is, you can **declare that a field can’t be modified after it’s assigned an initial value** — kind of like const for object properties) with the readonly modifier:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 let user: {
-  readonly firstName: string;
+readonly firstName: string;
 } = {
-  firstName: "abby",
+firstName: "abby",
 };
 
 user.firstName; // string
-user.firstName = "abbey with an e"; // Error TS2540: Cannot assign to 'firstName' because it is a read-only property.
-```
+user.firstName = "abbey with an e"; // Error TS2540: Cannot assign to 'firstName'
+// because it is a read-only property.
+{{< / highlight >}}
 
 ### Type aliases
 
 Here we've declared a type alias 'Age' that points to a type `number`:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 type Age = number;
 
 type Person = {
-  name: string;
-  age: age;
+name: string;
+age: age;
 };
-```
+{{< / highlight >}}
 
 ### Tuples
 
@@ -127,20 +132,22 @@ Tuples are subtypes of array. They’re a **special way to type arrays that have
 
 Unlike most other types, tuples have to be explicitly typed when you declare them. That’s because the JavaScript syntax is the same for tuples and arrays (both use square brackets), and TypeScript already has rules for inferring array types from square brackets:
 
-```typescript
-let b: [string, string, number] 
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+let b: [string, string, number];
 
-b = ['malcolm', 'gladwell', 1963] //this works fine and matches type
+b = ["malcolm", "gladwell", 1963]; //this works fine and matches type
 
-b = ['queen', 'elizabeth', 'ii', 1926] // the third element is not matching type and it has one more element than the tuple length specifies
-```
+b = ["queen", "elizabeth", "ii", 1926]; // the third element is not matching type and it has one more element than the tuple length specifies
+{{< / highlight >}}
+
 Tuples support optional elements and rest elements, which are sort of like [rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) - they allow you to accept an indefinite amount of indexes into the array. Note the use of the triple full stop syntax.
 
 For example, if we wanted to create a heterogeneous list:
 
-```typescript
-let list: [number, boolean, ...string[]] = [1, false, 'a', 'b', 'c']
-```
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+ let list: [number, boolean, ...string[]] = [1, false, "a", "b", "c"];
+{{< / highlight >}}
+
 
 ### Read-only arrays and tuples
 
@@ -148,20 +155,22 @@ Regular arrays are mutable, sometimes you want an immutable array. For example y
 
 To create a read-only array, use an explicit type annotation; to update a read-only array, use nonmutating methods like `.concat` and `.slice` instead of mutating ones like `.push` and `.splice`:
 
-```typescript
-let as: readonly number[] = [1, 2, 3]
-let bs: readonly number[] = as.concat(4)
-```
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+let as: readonly number[] = [1, 2, 3];
+let bs: readonly number[] = as.concat(4);
+{{< / highlight >}}
+
 
 ### Functions
 
-For functions in TypeScript you will usually explicitly annotate function parameters (`a` and `b` in this example) -- TypeScript will always infer types throughout the body of your function, but in most cases it won't infer types for your parameters. The return type therefore *is* inferred, but you can explicitly annotate it too:
+For functions in TypeScript you will usually explicitly annotate function parameters (`a` and `b` in this example) -- TypeScript will always infer types throughout the body of your function, but in most cases it won't infer types for your parameters. The return type therefore _is_ inferred, but you can explicitly annotate it too:
 
-```typescript
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
 function add(a: number, b: number): number {
-  return a + b
+  return a + b;
 }
-```
+{{< / highlight >}}
+
 
 ### Getters and Setters
 
@@ -173,4 +182,3 @@ For each property:
 - A setter method updates the property’s value. A setter is also known as a mutator. Keyword `set`.
 
 Setters are useful when you want to validate the data before assigning it to the properties.
-
