@@ -1,5 +1,5 @@
 {{- define "main" }}
-<h2>{{.Title}}</h2>
+<h2>{{if ne .Title "Tools"}}{{singularize .Title}}{{else}}{{.Title}}{{end}}</h2>
 <main>
   <article>{{.Content}}</article>
   <ul class="taxonomy">
