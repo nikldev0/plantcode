@@ -3,7 +3,7 @@ title: "What Exactly Is a Type Anyway?"
 date: 2021-06-28T22:20:43+01:00
 draft: false
 subtitle: ""
-banner: https://www.plantcode.blog/content/me/banner.png
+banner: https://www.plantcode.blog/me/banner.png
 categories: -undefined
 tags:
   - undefined
@@ -47,8 +47,8 @@ a = {} // Error TS2741: Property 'b' is missing in type '{}'
 // '{b: number}'.
 
 a = {
-  b: 1,
-  c: 2
+b: 1,
+c: 2
 }
 
 //_ Error TS2322: Type '{b: number; c: number}'
@@ -146,9 +146,8 @@ Tuples support optional elements and rest elements, which are sort of like [rest
 For example, if we wanted to create a heterogeneous list:
 
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
- let list: [number, boolean, ...string[]] = [1, false, "a", "b", "c"];
+let list: [number, boolean, ...string[]] = [1, false, "a", "b", "c"];
 {{< / highlight >}}
-
 
 ### Read-only arrays and tuples
 
@@ -161,17 +160,15 @@ let as: readonly number[] = [1, 2, 3];
 let bs: readonly number[] = as.concat(4);
 {{< / highlight >}}
 
-
 ### Functions
 
 For functions in TypeScript you will usually explicitly annotate function parameters (`a` and `b` in this example) -- TypeScript will always infer types throughout the body of your function, but in most cases it won't infer types for your parameters. The return type therefore _is_ inferred, but you can explicitly annotate it too:
 
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
 function add(a: number, b: number): number {
-  return a + b;
+return a + b;
 }
 {{< / highlight >}}
-
 
 ### Getters and Setters
 

@@ -2,7 +2,7 @@
 title: "All the Git mistakes I've made"
 date: 2021-05-20T13:04:00+01:00
 draft: false
-banner: https://www.plantcode.blog/content/me/banner.png
+banner: https://www.plantcode.blog/me/banner.png
 subtitle: And how I'm trying to avoid them.
 ---
 

@@ -3,7 +3,7 @@ title: "Typescript and Webpack Workflow"
 date: 2021-06-01T11:20:43+01:00
 draft: false
 subtitle: "A simple, framework-free dev environment"
-banner: https://www.plantcode.blog/content/me/banner.png
+banner: https://www.plantcode.blog/me/banner.png
 categories: frontend
 tags:
   - typescript
@@ -35,6 +35,7 @@ npm install --save-dev webpack@5.17.0
 npm install --save-dev webpack-cli@4.5.0
 npm install --save-dev ts-loader@8.0.14
 ```
+
 Note we are saving the above packages as dev dependencies. The webpack package contains the main bundler features, and the webpack-cli package adds command-line support. Webpack uses packages known as loaders to deal with different content types, and the ts-loader package adds support for compiling TypeScript files and feeding the compiled code into the bundle created by webpack.
 
 Next task is to create a webpack.config.js file.

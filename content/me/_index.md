@@ -2,7 +2,7 @@
 title: "Me"
 description: "About Nikhil K, Junior Software Engineer at Nightingale HQ"
 date: 2021-05-01T10:55:20+01:00
-banner: https://www.plantcode.blog/content/me/banner.png
+banner: https://www.plantcode.blog/me/banner.png
 draft: false
 menu: "mainmenu"
 ---

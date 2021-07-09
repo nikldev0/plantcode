@@ -3,7 +3,7 @@ title: "Mastering the TypeScript Compiler"
 date: 2021-05-27T08:24:46+01:00
 draft: false
 subtitle: "tsc or not tsc?"
-banner: https://www.plantcode.blog/content/me/banner.png
+banner: https://www.plantcode.blog/me/banner.png
 categories: frontend
 tags:
   - typescript
@@ -47,7 +47,6 @@ let c: boolean[] = [true, false];
 // c is an array of booleans
 {{< / highlight >}}
 
-
 Type Inference:
 
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
@@ -58,7 +57,6 @@ let b = "hello";
 let c = [true, false];
 // c is an array of booleans
 {{< / highlight >}}
-
 
 If you leave off the annotations, TypeScript is pretty good at inferring types for you. It's generally good practice to keep explicitly typed code at a minimum [according to most style guides](https://google.github.io/styleguide/tsguide.html#type-and-non-nullability-assertions).
 
@@ -83,14 +81,11 @@ TypeScript on the other hand throws both syntax-related errors and type-related 
 
 First initialise a new NPM project (follow the prompts)
 
-
 `npm init`
-
 
 Install TSC, TSLint, and type declarations for NodeJS
 
 `npm install --save-dev typescript tslint @types/node`
-
 
 In your terminal window:
 
@@ -109,81 +104,76 @@ tsc --init
 - TSLint was [deprecated in 2019](https://github.com/palantir/tslint/issues/4534) to support the migration to ESLint as the standard linter for both TypeScript & JavaScript.
 - Follow all required steps in [this guide](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md).
 
-
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
 //.eslintrc.js
 
 module.exports = {
-    root: true,
-    parser: '@typescript-eslint/parser',
-    plugins: [
-    '@typescript-eslint',
-    ],
-    extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    ],
-  };
+root: true,
+parser: '@typescript-eslint/parser',
+plugins: [
+'@typescript-eslint',
+],
+extends: [
+'eslint:recommended',
+'plugin:@typescript-eslint/recommended',
+],
+};
 {{< / highlight >}}
 
 Include Prettier (you may need to [install another config](https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/README.md#usage-with-prettier)):
 
 {{< highlight typescript "linenos=tables, hl_lines=12,linenostart=1" >}}
- //.eslintrc.js
+//.eslintrc.js
 
- module.exports = {
-   root: true,
-   parser: '@typescript-eslint/parser',
-   plugins: [
-    '@typescript-eslint',
-   ],
-   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    "prettier",
-   ],
- };
+module.exports = {
+root: true,
+parser: '@typescript-eslint/parser',
+plugins: [
+'@typescript-eslint',
+],
+extends: [
+'eslint:recommended',
+'plugin:@typescript-eslint/recommended',
+"prettier",
+],
+};
 {{< / highlight >}}
-
 
 Enable `node` support for ESLint. By [specifying your environment](https://eslint.org/docs/user-guide/configuring/language-options#using-configuration-files).
 
 {{< highlight typescript "linenos=tables, hl_lines=12-14,linenostart=1" >}}
- module.exports = {
-   root: true,
-   parser: '@typescript-eslint/parser',
-   plugins: [
-    '@typescript-eslint',
-   ],
-   extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-     "prettier",
-   ],
-   env: {
-    node: true,
-  },
- };
+module.exports = {
+root: true,
+parser: '@typescript-eslint/parser',
+plugins: [
+'@typescript-eslint',
+],
+extends: [
+'eslint:recommended',
+'plugin:@typescript-eslint/recommended',
+"prettier",
+],
+env: {
+node: true,
+},
+};
 {{< / highlight >}}
-
 
 Expect to see the following dev dependencies installed in your `package.json` file.
 
-
 {{< highlight typescript "linenos=tables, hl_lines=12-14,linenostart=1" >}}
- //package.json
+//package.json
 
- "devDependencies": {
-   "@types/node": "^15.6.1",
-   "@typescript-eslint/eslint-plugin": "^4.25.0",
-   "@typescript-eslint/parser": "^4.25.0",
-   "eslint": "^7.27.0",
-   "eslint-config-prettier": "^8.3.0",
-   "tslint": "^6.1.3",
-   "typescript": "^4.3.2"
- }
+"devDependencies": {
+"@types/node": "^15.6.1",
+"@typescript-eslint/eslint-plugin": "^4.25.0",
+"@typescript-eslint/parser": "^4.25.0",
+"eslint": "^7.27.0",
+"eslint-config-prettier": "^8.3.0",
+"tslint": "^6.1.3",
+"typescript": "^4.3.2"
+}
 {{< / highlight >}}
-
 
 If you're getting this error: `“ESLint is disabled since its execution has not been approved or denied yet”` then you probably do not have the extension enabled. This can easily be configured at the bottom right corner of VSC.
 
@@ -212,14 +202,14 @@ You may then run:
 You can then set up the following npm scripts in your package.json folder:
 
 {{< highlight typescript "linenos=tables, hl_lines=12-14,linenostart=1" >}}
- //package.json
+//package.json
 
- "scripts": {
-  "start": "node dist/index.js",
-  "dev": "nodemon src/index.ts",
-  "build": "tsc -p .",
-  "test": "echo \"Error: no test specified\" && exit 1"
- }
+"scripts": {
+"start": "node dist/index.js",
+"dev": "nodemon src/index.ts",
+"build": "tsc -p .",
+"test": "echo \"Error: no test specified\" && exit 1"
+}
 {{< / highlight >}}
 
 Any changes you make to your TypeScript file can be seen in the terminal when you run `npm run dev`.
