@@ -3,7 +3,7 @@ title: "Typescript and Webpack Workflow"
 date: 2021-06-01T11:20:43+01:00
 draft: false
 subtitle: "A simple, framework-free dev environment"
-banner: bundler.png
+banner: https://www.plantcode.blog/frontend/typescript-and-webpack-workflow/bundler.png
 categories: frontend
 tags:
   - typescript
