@@ -3,7 +3,7 @@ title: "What Exactly Is a Type Anyway?"
 date: 2021-06-28T22:20:43+01:00
 draft: false
 subtitle: ""
-banner: "https://banners.beyondco.de/plantcode.png?theme=light&packageManager=&packageName=What+exactly+is+a+type+anyway%3F+&pattern=leaf&style=style_2&description=&md=1&showWatermark=0&fontSize=150px&images=https%3A%2F%2Fbeyondco.de%2Fimg%2Flogo.svg&widths=auto"
+banner: https://www.plantcode.blog/content/me/banner.png
 categories: -undefined
 tags:
   - undefined

@@ -3,6 +3,7 @@ title: "Mastering the TypeScript Compiler"
 date: 2021-05-27T08:24:46+01:00
 draft: false
 subtitle: "tsc or not tsc?"
+banner: https://www.plantcode.blog/content/me/banner.png
 categories: frontend
 tags:
   - typescript
