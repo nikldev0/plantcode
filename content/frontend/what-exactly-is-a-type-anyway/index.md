@@ -75,7 +75,7 @@ b: number;
 c?: string;
 [key: number]: boolean;
 };
-{{< / highlight >}}.
+{{< / highlight >}}
 
 1. `a` has a property `b` that's a `number`.
 2. `a` _might_ have a property `c` that's a `string`. And if `c` is set, it might be `undefined`.
