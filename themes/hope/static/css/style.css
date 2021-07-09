@@ -73,6 +73,8 @@ header {
 .home .lead {
   display: flex;
   flex-direction: column;
+  border: 2px solid transparent;
+  padding-right: 1rem;
 }
 
 .home .lead p {
