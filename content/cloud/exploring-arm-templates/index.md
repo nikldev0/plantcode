@@ -3,6 +3,7 @@ title: "Exploring ARM Templates"
 date: 2021-06-01T20:49:16+01:00
 draft: false
 subtitle: "Transpiling ARM to Bicep"
+banner: https://www.plantcode.blog/me/banner.jpg
 categories: undefined
 tags:
   - ARM
@@ -24,31 +25,31 @@ Variables allow you to calculate something dynamically. This allows you to calcu
 
 The outputs section allows you to return variables from template execution as template output.
 
-The functions section allows you to create custom JSON expression functions defined by the user. 
+The functions section allows you to create custom JSON expression functions defined by the user.
 
 Azure Resource Manager speaks to resource providers. This is why you have to keep the apiVersion updated, but with caution so it doesn't lead to any breaking changes.
 
 SKU is a combination of the performance and replication. SKU is short for 'Stock-keeping-Unit'.
 
-It basically stands for an item which is on sale, in layman language. 
+It basically stands for an item which is on sale, in layman language.
 
-In terms of the Microsoft Azure cloud, they basically signify a purchasable SKU under a product. It has a bunch of different shapes of the product. 
+In terms of the Microsoft Azure cloud, they basically signify a purchasable SKU under a product. It has a bunch of different shapes of the product.
 
-Old properties becomes sku when you are calling resources with new apiVersion. 
+Old properties becomes sku when you are calling resources with new apiVersion.
 
-Bicep does not like single-line objects or single-line arrays. 
+Bicep does not like single-line objects or single-line arrays.
 
 Square brackets are for invoking functions within ARM templates. We can use these functions to parametrize our templates and these are evaluated during deployment.
 
 The reason you cannot use concat in bicep is because it's not recommended by the spec. Here you can see the [differences between ARM Template syntax and the native Bicep equivalent](https://github.com/Azure/bicep/blob/main/docs/arm2bicep.md).
 
-[If conditions are not supported in Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions-logical#if). 
+[If conditions are not supported in Bicep](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions-logical#if).
 
 For [retriving storage access keys](https://blog.eldert.net/retrieve-azure-storage-access-keys-in-arm-template/) in an ARM template.
 
 The listkeys function requires two inputs, the resource ID of the Storage account and the API version to use. We retrieve the resource ID using the resourceId function, while the API version is available for reference on Microsoft Docs.
 
-The date calls a static API version, and then we can add this to retrieve the primary key during the creation of the API connection. 
+The date calls a static API version, and then we can add this to retrieve the primary key during the creation of the API connection.
 
 ### Dealing with Microsoft.Logic Templates
 
@@ -87,7 +88,7 @@ Mandatory properties will have 'required' beside them.
 https://github.com/Azure/azure-quickstart-templates
 
 3. To learn more about parameters syntax in bicep, including how to add metadata, this is an excellent resource: https://ravichaganti.com/blog/bicep-basics-beyond-basics-parameters/
-   
+
 4. Another good blog resource: https://yashints.dev/blog/2021/05/10/from-arm-to-bicep#loops
 
 
