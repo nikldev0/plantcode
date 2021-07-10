@@ -3,7 +3,7 @@ title: "How I Learn Actively"
 date: 2021-06-13T17:18:02+01:00
 draft: true
 subtitle: ""
-banner: https://www.plantcode.blog/me/banner.png
+banner: https://www.plantcode.blog/me/banner.jpg
 categories: -undefined
 tags:
   - undefined
