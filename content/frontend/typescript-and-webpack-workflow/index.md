@@ -35,26 +35,41 @@ Note I've added the `--yes` flag to my [npm init](https://docs.npmjs.com/cli/v7/
 If you don't already have the TypeScript compiler installed globally, you can fetch it as a local dev dependency.
 
 {{< highlight html "linenos=tables,linenostart=1" >}}
-npm install --save-dev typescript@4.2.2
+ npm install --save-dev typescript@4.2.2
 {{< / highlight >}}
 
 Then run:
 
 {{< highlight html "linenos=tables,linenostart=1" >}}
-tsc --init
+ tsc --init
 {{< / highlight >}}
 
 This creates a tsconfig.json file where you can specify different options about how TypeScript is going to work in our local directory. For example, this my configuration:
 
 {{< highlight json "linenos=tables,linenostart=1" >}}
 {
-"compilerOptions": {
-"target": "es2020",
-"outDir": "./dist",
-"rootDir": "./src"
-}
+  "compilerOptions": {
+  "target": "es2020",
+  "outDir": "./dist",
+  "rootDir": "./src"
+ }
 };
 {{< / highlight >}}
+
+Go ahead and create an `src` folder within your project directory, and then an index.ts file:
+
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+ console.log("Hello, World")
+{{< / highlight >}}
+
+You can compile and execute this result like so:
+
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+tsc
+node dist/index.js
+{{< / highlight >}}
+
+This will compile your TypeScript file into JavaScript that is readable by your terminal. Here you can [learn more about how the TypeScript compiler works](../understanding-the-typescript-compiler) and how to compile and execute your TypeScript faster using nodemon.
 
 Next we'll look at the specific webpack dependencies we would need to install.
 
@@ -66,4 +81,21 @@ npm install --save-dev ts-loader@8.0.14
 
 Note we are saving the above packages as [dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file). The webpack package contains the main bundler features, and the [webpack-cli](https://webpack.js.org/api/cli/) package adds command-line support which make working with webpack easier. Webpack uses packages known as loaders to deal with different content types and preprocess files, and the [ts-loader package](https://github.com/TypeStrong/ts-loader) adds support for compiling TypeScript files.
 
-Next task is to create a webpack.config.js file.
+Next task is to add a webpack.config.js file to your root folder. Once created, implement the following configuration:
+
+{{< highlight json "linenos=tables,linenostart=1" >}}
+ module.exports = {
+    mode: "development",
+    devtool: "inline-source-map",
+    entry: "./src/index.ts",
+    output: { filename: "bundle.js" },
+    resolve: { extensions: [".ts", ".js"] },
+    module: {
+        rules: [
+            { test: /\.ts/, use: "ts-loader", exclude: /node_modules/ }
+        ]
+    }
+ };
+{{< / highlight >}}
+
+To run through what this is doing, [mode](https://webpack.js.org/configuration/mode/) 'tells webpack to use its built-in optimizations accordingly' i.e. lets webpack know what kind of environment this project is concerned with.
