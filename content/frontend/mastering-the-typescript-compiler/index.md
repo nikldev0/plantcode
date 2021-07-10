@@ -90,13 +90,15 @@ TypeScript on the other hand throws both syntax-related errors and type-related 
 
 ## Get good at the tsc CLI 😎
 
-First initialise a new npm project (follow the prompts)
+First initialise a new npm project in your project directory (follow the prompts)
 
 `npm init`
 
 Install TSC, TSLint, and type declarations for NodeJS
 
 `npm install --save-dev typescript tslint @types/node`
+
+You can also choose to [install the TypeScript complier globally](https://code.visualstudio.com/docs/typescript/typescript-compiling#_install-the-typescript-compiler).
 
 In your terminal window:
 
