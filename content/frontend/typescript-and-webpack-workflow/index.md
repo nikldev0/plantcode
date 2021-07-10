@@ -3,7 +3,8 @@ title: "TypeScript and Webpack Workflow"
 date: 2021-07-06T11:20:43+01:00
 draft: false
 subtitle: "A simple, framework-free dev environment"
-banner: https://www.plantcode.blog/me/banner.jpg
+description: "Configure a stand-alone TypeScript application using Webpack for a simple dev learning environment"
+banner: https://plantcode.blog/frontend/typescript-and-webpack-workflow\typescript-and-webpack-workflow.jpg
 categories: frontend
 tags:
   - TypeScript
@@ -34,25 +35,25 @@ Note I've added the `--yes` flag to my [npm init](https://docs.npmjs.com/cli/v7/
 If you don't already have the TypeScript compiler installed globally, you can fetch it as a local dev dependency.
 
 {{< highlight html "linenos=tables,linenostart=1" >}}
- npm install --save-dev typescript@4.2.2
+npm install --save-dev typescript@4.2.2
 {{< / highlight >}}
 
 Then run:
 
 {{< highlight html "linenos=tables,linenostart=1" >}}
- tsc --init
+tsc --init
 {{< / highlight >}}
 
 This creates a tsconfig.json file where you can specify different options about how TypeScript is going to work in our local directory. For example, this my configuration:
 
 {{< highlight json "linenos=tables,linenostart=1" >}}
- {
-    "compilerOptions": {
-    "target": "es2020",
-    "outDir": "./dist",
-    "rootDir": "./src"
-    }
- };
+{
+"compilerOptions": {
+"target": "es2020",
+"outDir": "./dist",
+"rootDir": "./src"
+}
+};
 {{< / highlight >}}
 
 Next we'll look at the specific webpack dependencies we would need to install.
