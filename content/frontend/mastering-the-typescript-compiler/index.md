@@ -1,5 +1,5 @@
 ---
-title: "Mastering the TypeScript Compiler"
+title: "Understanding the TypeScript Compiler"
 date: 2021-07-05T08:24:46+01:00
 draft: false
 subtitle: "tsc or not tsc?"
@@ -39,7 +39,6 @@ The compile process between TypeScript and JavaScript is as follows:
 After TypeScript generates an AST for your program but before it emits code, the TypeScript compiler makes your code safer by ✨typechecking✨ your code.
 
 **Typechecker**: A special program that verifies that your code is typesafe.
-
 
 **Type system**: A set of rules that a typechecker uses to assign types to your program.
 
