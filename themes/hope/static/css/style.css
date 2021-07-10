@@ -171,7 +171,8 @@ main p {
 /* single pages */
 
 article a {
-  background-color: rgb(187, 214, 255);
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
 }
 
 .singleContent ol,

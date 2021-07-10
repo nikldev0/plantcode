@@ -1,7 +1,7 @@
 ---
 title: "Exploring ARM Templates"
 date: 2021-06-01T20:49:16+01:00
-draft: false
+draft: true
 subtitle: "Transpiling ARM to Bicep"
 banner: https://www.plantcode.blog/me/banner.jpg
 categories: undefined
@@ -70,7 +70,6 @@ For `dependsOn` use the symbolic name of the resource rather than the resource n
 
 For the FAQ Chatbots deployment, you have to confirm the default values.
 
-
 ## Key Resources
 
 1. When creating Azure Resource Manager templates (ARM templates), you need to understand what resource types are available, and what values to use in your template. The ARM template reference documentation provides these values.
@@ -90,8 +89,6 @@ https://github.com/Azure/azure-quickstart-templates
 3. To learn more about parameters syntax in bicep, including how to add metadata, this is an excellent resource: https://ravichaganti.com/blog/bicep-basics-beyond-basics-parameters/
 
 4. Another good blog resource: https://yashints.dev/blog/2021/05/10/from-arm-to-bicep#loops
-
-
 
 ## List of useful az commands
 

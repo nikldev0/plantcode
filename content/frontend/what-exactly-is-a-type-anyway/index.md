@@ -1,7 +1,7 @@
 ---
 title: "What Exactly Is a Type Anyway?"
 date: 2021-06-28T22:20:43+01:00
-draft: false
+draft: true
 subtitle: "What does a type system bring to languages like TypeScript?"
 banner: https://www.plantcode.blog/me/banner.jpg
 categories: -undefined

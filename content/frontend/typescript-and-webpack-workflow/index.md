@@ -1,18 +1,18 @@
 ---
 title: "TypeScript and Webpack Workflow"
-date: 2021-06-01T11:20:43+01:00
+date: 2021-07-06T11:20:43+01:00
 draft: false
 subtitle: "A simple, framework-free dev environment"
 banner: https://www.plantcode.blog/me/banner.jpg
 categories: frontend
 tags:
-  - typescript
-  - webpack
+  - TypeScript
+  - Webpack
 ---
 
-Web application development relies on a chain of tools that compile the code and prepare it for the delivery and execution of the application by the JavaScript runtime. The TypeScript compiler is the only development tool in the project at present for a node.js project.
+Web application development relies on a chain of tools that compile the code and prepare it for the delivery and execution of the application by the JavaScript runtime.
 
-Frameworks like Vue, Angular and React hide these development tools.
+Frameworks like Vue, Angular and React hide these development tools, but if you're looking to experiment with TypeScript outside of one you may be interested in configuring a stand-alone TypeScript application using [Webpack](https://webpack.js.org/guides/typescript/).
 
 Webpack is a bundling tool that helps us with our development workflow. It bundles all of our source files and code into a web optimised output folder ready for distribution.
 
@@ -20,22 +20,49 @@ Webpack is a bundling tool that helps us with our development workflow. It bundl
 
 We add a bundler because web applications don't have direct access to our file system. Instead, files have to be requested over HTTP. A bundler resolves the dependencies during compilation and packages all the files that the application uses into a single file.
 
-One HTTP request delivers all the JavaScript required to run the application.
+In other words, with Webpack we can have one HTTP request deliver all the JavaScript required to run the application.
 
-The first step is to initialise typescript in your project using
+The first step is to create a suitable directory for your webpack project. I've just named mine 'webpack'. Once created we can tell the Node Package Manager (npm) to create a package.json file which will help configure our dependencies.
 
-`tsc --init`
+{{< highlight html "linenos=tables,linenostart=1" >}}
+cd webapp
+npm init --yes
+{{< / highlight >}}
 
-this creates a tsconfig.json file where you can specify different options about how TypeScript is going to work in your local directory.
+Note I've added the `--yes` flag to my [npm init](https://docs.npmjs.com/cli/v7/commands/npm-init) command to skip the questionnaire because I'm happy with defaults.
 
-Running `npm init` will create a package.json file, allowing you to keep track of all your dependencies.
+If you don't already have the TypeScript compiler installed globally, you can fetch it as a local dev dependency.
 
-```npm
+{{< highlight html "linenos=tables,linenostart=1" >}}
+ npm install --save-dev typescript@4.2.2
+{{< / highlight >}}
+
+Then run:
+
+{{< highlight html "linenos=tables,linenostart=1" >}}
+ tsc --init
+{{< / highlight >}}
+
+This creates a tsconfig.json file where you can specify different options about how TypeScript is going to work in our local directory. For example, this my configuration:
+
+{{< highlight json "linenos=tables,linenostart=1" >}}
+ {
+    "compilerOptions": {
+    "target": "es2020",
+    "outDir": "./dist",
+    "rootDir": "./src"
+    }
+ };
+{{< / highlight >}}
+
+Next we'll look at the specific webpack dependencies we would need to install.
+
+{{< highlight html "linenos=tables,linenostart=1" >}}
 npm install --save-dev webpack@5.17.0
 npm install --save-dev webpack-cli@4.5.0
 npm install --save-dev ts-loader@8.0.14
-```
+{{< / highlight >}}
 
-Note we are saving the above packages as dev dependencies. The webpack package contains the main bundler features, and the webpack-cli package adds command-line support. Webpack uses packages known as loaders to deal with different content types, and the ts-loader package adds support for compiling TypeScript files and feeding the compiled code into the bundle created by webpack.
+Note we are saving the above packages as [dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file). The webpack package contains the main bundler features, and the [webpack-cli](https://webpack.js.org/api/cli/) package adds command-line support which make working with webpack easier. Webpack uses packages known as loaders to deal with different content types and preprocess files, and the [ts-loader package](https://github.com/TypeStrong/ts-loader) adds support for compiling TypeScript files.
 
 Next task is to create a webpack.config.js file.
