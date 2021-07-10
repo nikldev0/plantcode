@@ -3,6 +3,7 @@ title: "Understanding the TypeScript Compiler"
 date: 2021-07-05T08:24:46+01:00
 draft: false
 subtitle: "tsc or not tsc?"
+description: The way TypeScript works is unusual compared to JavaScript and other popular languages. Learn more about the tsc compiler.
 banner: https://plantcode.blog/frontend/understanding-the-typescript-compiler/understanding-the-typescript-compiler.jpg
 categories: frontend
 tags:
