@@ -109,7 +109,7 @@ tsc --init
 // file in your root folder
 {{< / highlight >}}
 
-[tsconfigdemystified](https://generator.tsconfigdemystified.com/) is an excellent resource interactively outlines what you're missing different values for your tsconfig.json file do.
+When you run the command, TypeScript will provide a template listing all possible configuration types within the tsconfig.json file. For full reference you can [examine the docs](https://www.typescriptlang.org/tsconfig). Another helpful resource is [tsconfigdemystified](https://generator.tsconfigdemystified.com/), which interactively outlines what you're missing different values for your tsconfig.json file do.
 
 ## Configure your linter
 

@@ -79,7 +79,7 @@ npm install --save-dev webpack-cli@4.5.0
 npm install --save-dev ts-loader@8.0.14
 {{< / highlight >}}
 
-Note we are saving the above packages as [dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file). The webpack package contains the main bundler features, and the [webpack-cli](https://webpack.js.org/api/cli/) package adds command-line support which make working with webpack easier. Webpack uses packages known as loaders to deal with different content types and preprocess files, and the [ts-loader package](https://github.com/TypeStrong/ts-loader) adds support for compiling TypeScript files.
+Note we are saving the above packages as [dev dependencies](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file). You may need to spend some time looking at package versions and cross-compatability if you're following along. The webpack package contains the main bundler features, and the [webpack-cli](https://webpack.js.org/api/cli/) package adds command-line support which make working with webpack easier. Webpack uses packages known as loaders to deal with different content types and preprocess files, and the [ts-loader package](https://github.com/TypeStrong/ts-loader) adds support for compiling TypeScript files.
 
 Next task is to add a webpack.config.js file to your root folder. Once created, implement the following configuration:
 
@@ -99,3 +99,88 @@ Next task is to add a webpack.config.js file to your root folder. Once created, 
 {{< / highlight >}}
 
 To run through what this is doing, [mode](https://webpack.js.org/configuration/mode/) 'tells webpack to use its built-in optimizations accordingly' i.e. lets webpack know what kind of environment this project is concerned with.
+
+[Devtool](https://webpack.js.org/configuration/devtool/) option controls if and how [source maps](http://blog.teamtreehouse.com/introduction-source-maps) are generated. Here we are doing it inline.
+
+[Entry](https://webpack.js.org/configuration/entry-context/) is simply where webpack looks to start the bundler process.
+
+Likewise, [output](https://webpack.js.org/configuration/output/) tells webpack where it should output whatever we are bundling.
+
+[resolve.extensions](https://webpack.js.org/configuration/output/) refers to the order in which we are resolving files with the specified extensions based on the module rule. Here, the rule configures webpack to use the ts-loader package to process files with the `.ts` file extension.
+
+Next you can run
+
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+ npx webpack
+{{< / highlight >}}
+
+to allow webpack to work its way through the dependencies and use ts-loader to compile TypeScript files.
+
+You'll get an executable bundle file upon running:
+
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+ node dist/bundle.js
+{{< / highlight >}}
+
+And should now see our `"Hello, World"` flash in the terminal! 🥳
+
+Just a bundle file itself isn't enough though, we need a web server to deliver the bundle file to the browser so it can be executed. Luckily, there's a package for this called the [Webpack Dev Server(WDS)](https://github.com/webpack/webpack-dev-server).
+
+{{< highlight html "linenos=tables,linenostart=1" >}}
+ npm install --save-dev webpack-dev-server@3.11.2
+{{< / highlight >}}
+
+We then need to change our initial webpack configuration to set up a port for WDS to work on.
+
+{{< highlight json "linenos=tables, hl_lines=12-15,linenostart=1" >}}
+ module.exports = {
+    mode: "development",
+    devtool: "inline-source-map",
+    entry: "./src/index.ts",
+    output: { filename: "bundle.js" },
+    resolve: { extensions: [".ts", ".js"] },
+    module: {
+        rules: [
+            { test: /\.ts/, use: "ts-loader", exclude: /node_modules/ }
+        ]
+    },
+    devServer: {
+        contentBase: "./assets",
+        port: 4500
+    }
+ };
+{{< / highlight >}}
+
+This is telling WDS to listen for HTTP requests on port 4500. Now we just need an HTML file that can be used to respond to browsers. I've created a HTML boilerplate file called index.html in a folder I created within the project directory called assets:
+
+{{< highlight html "linenos=tables, linenostart=1" >}}
+<!-- assets/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webapp</title>
+    <div id="app"></div>
+</head>
+
+<body>
+    <h1>This is my TypeScript + Webpack app.</h1>
+</body>
+
+</html>
+
+{{< / highlight >}}
+
+We can now run...
+
+{{< highlight typescript "linenos=tables,linenostart=1" >}}
+ npx webpack serve
+{{< / highlight >}}
+
+and get our webapp live! The contents of our index.html file are displayed on the browser. You can make changes to the HTML file and view them upon refresh. However, the browser is reloaded automatically when we make changes to the index.ts file as we've specified that as our entry point.
+
+{{< figure src="webapp.png" caption="Our running webapp on localhost:4500!" >}}
