@@ -286,6 +286,21 @@ body.dark-mode .navigation a:visited {
   color: #79d2fe;
 }
 
+body.dark-mode .about,
+body.dark-mode .home,
+body.dark-mode .singleContent {
+  border-bottom: 1px solid #79d2fe;
+}
+
+body.dark-mode .taxonomy {
+  border-bottom: 1px solid #79d2fe;
+}
+
+body.dark-mode td,
+body.dark-mode th {
+  border: 1px solid #79d2fe;
+}
+
 /* Medium Screens i.e Tablets etc. media queries */
 
 @media only screen and (min-width: 577px) and (max-width: 991px) {
