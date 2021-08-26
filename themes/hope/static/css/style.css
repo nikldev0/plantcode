@@ -282,8 +282,7 @@ body.dark-mode article a {
 }
 
 body.dark-mode .navigation a,
-.navigation a:visited {
-  text-decoration: none;
+body.dark-mode .navigation a:visited {
   color: #79d2fe;
 }
 
