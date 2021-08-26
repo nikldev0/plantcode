@@ -233,8 +233,15 @@ figure img {
 /* Footer */
 
 footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-align: center;
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
+}
+
+small {
+  margin-bottom: 2rem;
 }
 
 /* Table styling */
@@ -259,6 +266,25 @@ th {
   text-align: left;
   background-color: #3b3daf;
   color: white;
+}
+
+/* Dark Mode */
+
+body.dark-mode,
+body.dark-mode main * {
+  background: #121212;
+  color: #79d2fe;
+}
+
+body.dark-mode article a {
+  background-color: #79d2fe;
+  color: #121212;
+}
+
+body.dark-mode .navigation a,
+.navigation a:visited {
+  text-decoration: none;
+  color: #79d2fe;
 }
 
 /* Medium Screens i.e Tablets etc. media queries */
