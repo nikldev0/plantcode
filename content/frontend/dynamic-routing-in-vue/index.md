@@ -11,9 +11,9 @@ tags:
 
 Dynamic routing is needed in Vue when you want to add to, remove from or otherwise change routes on the fly while the application is already running. This is particularly useful when you want a dynamic segment of a URL that mutates according to - for example - user, id or page number.
 
-Dynamic routing involves understanding how props work.
+When using dynamic routing it helps to reiterate how props work.
 
-Props are custom attributes for passing data from a parent to a child component. If you liken a prop to a funnel, then you need to understand that it's the child component that holds the funnel, so it's the child component that will have the prop object. Allow me to explain.
+Props are custom attributes for passing data from a parent to a child component. If you liken a prop to a funnel, then you need to understand that it's the child component that holds the funnel, so it's the child component that will have the prop object.
 
 In the `index.js` file where I've configured my routes I have the params of id at the end of the events path. The colon here is similar to the [v-bind shorthand](https://v3.vuejs.org/guide/class-and-style.html#object-syntax) and allows us to respond to URLs matching the specified pattern.
 
