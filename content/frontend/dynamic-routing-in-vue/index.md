@@ -20,22 +20,22 @@ In the `index.js` file where I've configured my routes I have the params of id a
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
 const routes = [
 //...some routes here...
-{
-path: '/events/:id',
-props: true,
-name: 'EventDetails',
-component: EventDetails
-},
+ {
+ path: '/events/:id',
+ props: true,
+ name: 'EventDetails',
+ component: EventDetails
+ },
 {{< / highlight >}}
 
 This means when a user lands on a path with `/events/123` or `/events/456`, they will be served the same route but with a variable parameter which gets updated with the id of whichever event is currently displayed on that route. In another usecase this could've been `:user` or `:orderNumber`.
 
-The dynamic id is fed into the component as a prop, which allows, for example, the api endpoint to be adjusted accordingly for that specific page. Note that we also set the boolean `props` to be true to give the component that will be displaying the information to access this dynamic segment parameters as a prop.
+The dynamic id is fed into the component as a prop, which allows, for example, the api endpoint to be adjusted accordingly for that specific page. Note that we also set the boolean `props` to be true to allow the component that will be displaying the information to access this dynamic segment parameter as a prop.
 
 If we were to set a router-link wrapped around a card which determines the value for the page depending on the id, it would look something like this:
 
 {{< highlight typescript "linenos=tables,linenostart=1" >}}
-<router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
+ <router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
 {{< / highlight >}}
 
 Here the id param is being determined by event.id. This particular component has `event` as a prop funneling in data from a parent component for each event from a list.
