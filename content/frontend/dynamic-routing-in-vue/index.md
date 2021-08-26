@@ -3,7 +3,7 @@ title: "Dynamic Routing in Vue"
 date: 2021-08-26T17:18:23+01:00
 draft: false
 subtitle: "Making Vue router malleable"
-banner: https://www.plantcode.blog/me/banner.jpg
+banner: https://plantcode.blog/frontend/dynamic-routing-in-vue/dynamic-routing-in-vue.png
 categories: -frontend
 tags:
   - Vue
