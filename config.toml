@@ -1,10 +1,13 @@
-baseURL = "/"
+baseURL = "https://www.plantcode.blog/"
 languageCode = "en-us"
 title = "plantcode"
 theme = "hope"
 enableEmoji = true
 pygmentsUseClasses =  true
 
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = true
+
 [params]
 author = "Nikhil K"
-description = ""
+description = "Personal dev blog of software engineer Nikhil K"
