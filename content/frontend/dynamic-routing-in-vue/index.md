@@ -38,6 +38,8 @@ If we were to set a router-link wrapped around a card which determines the value
  <router-link :to="{ name: 'EventDetails', params: { id: event.id } }">
 {{< / highlight >}}
 
+The 'name' property in router objects is case-sensitive, so it's important to ensure the name you have in your router-link matches the router name object exactly.
+
 Here the id param is being determined by event.id. This particular component has `event` as a prop funneling in data from a parent component for each event from a list.
 
 A particular event's id is looped into the id parameter of the dynamic route - meaning we get a URL with an id that matches the id of the event, and therefore unique pages for each event.
