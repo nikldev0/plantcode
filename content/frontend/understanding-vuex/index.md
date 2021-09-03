@@ -155,7 +155,7 @@ We simply add the following line:
 
 Remember the action simply calls the mutation, it's the mutation that does the work of changing state.
 
-When we call our action we refer to the name of the action, as the payload that eventually gets passed in as a payload for the mutation within.
+When we call our action we refer to its name, and the payload eventually gets passed in as a payload for the mutation within.
 
 {{< highlight javascript "linenos=tables,hl_lines=8, linenostart=1" >}}
 methods: {
