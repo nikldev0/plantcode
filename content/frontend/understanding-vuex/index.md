@@ -3,7 +3,7 @@ title: "Understanding Vuex"
 date: 2021-09-01T21:03:34+01:00
 draft: false
 subtitle: "The quest for a single source of truth"
-banner: https://www.plantcode.blog/me/banner.jpg
+banner: https://plantcode.blog/frontend/understanding-vuex/understanding-vuex.png
 categories: -frontend
 tags:
   - Vue
