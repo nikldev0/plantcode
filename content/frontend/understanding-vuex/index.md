@@ -53,7 +53,7 @@ const store = createStore({
 })
 {{< / highlight >}}
 
-The 'context' object contains all the properties of our Vuex store which allows us to 'commit' mutations. The first mutation we're committing is to change the loading status by calling the mutation name, and then setting it to loading.
+The 'context' object contains all the properties of our Vuex store which allows us to 'commit' mutations. The mutation fulfills the intention of an action.
 
 Do not put state directly in our data as this can cause reactivity issues, although bear in mind that the way to access the global store is through this.$store.
 
