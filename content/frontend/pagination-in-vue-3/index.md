@@ -3,7 +3,7 @@ title: "Pagination in Vue 3"
 date: 2021-08-30T14:10:42+01:00
 draft: false
 subtitle: "A simple guide to getting pagination right in Vue"
-banner: https://www.plantcode.blog/me/banner.jpg
+banner: https://plantcode.blog/frontend/pagination-in-vue-3/pagination-in-vue-3.png
 categories: -frontend
 tags:
   - Vue

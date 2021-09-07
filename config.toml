@@ -4,6 +4,8 @@ title = "plantcode"
 theme = "hope"
 enableEmoji = true
 pygmentsUseClasses =  true
+paginate = 5
+paginatePath = "page"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = true

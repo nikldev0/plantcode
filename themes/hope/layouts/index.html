@@ -2,7 +2,8 @@
 <main class="home">
   <ul>
     <!-- Ranges through content/posts/*.md -->
-    {{ range .Site.RegularPages }}
+    {{ $paginator := .Paginate (where .Site.Pages "Kind" "page") }}
+    {{ range .Paginator.Pages }}
     <li>
       {{ if ne .Title "Me" }}
       <div class="lead">
@@ -12,6 +13,7 @@
       <p class="date">{{.Date.Format "Jan-02-06"}}</p>
     </li>
     {{ end }} {{ end }}
+    {{ partial "pagination" .}}
   </ul>
 </main>
 

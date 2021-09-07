@@ -268,6 +268,12 @@ th {
   color: white;
 }
 
+/* Pagination */
+
+.home .page-link {
+  font-size: 0.8rem;
+}
+
 /* Dark Mode */
 
 body.dark-mode,
@@ -315,6 +321,10 @@ body.dark-mode th {
   table {
     font-size: 1rem;
   }
+
+  .home .page-link {
+    font-size: 1rem;
+  }
 }
 
 /* Large Screens media queries */
@@ -335,5 +345,9 @@ body.dark-mode th {
 
   table {
     font-size: 1rem;
+  }
+
+  .home .page-link {
+    font-size: 1.2rem;
   }
 }
