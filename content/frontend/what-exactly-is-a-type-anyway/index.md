@@ -3,7 +3,8 @@ title: "What Exactly Is a Type Anyway?"
 date: 2021-06-28T22:20:43+01:00
 draft: false
 subtitle: "How TypeScript makes JavaScript better"
-banner: https://www.plantcode.blog/me/banner.jpg
+banner: https://plantcode.blog/frontend/what-exactly-is-a-type-anyway/what-exactly-is-a-type-anyway.png
+content
 categories: -frontend
 tags:
   - TypeScript

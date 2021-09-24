@@ -3,7 +3,7 @@ title: "Why the Composition API Exists"
 date: 2021-09-08T11:18:51+01:00
 draft: false
 subtitle: "Vue 3's most powerful new feature"
-banner: https://www.plantcode.blog/me/banner.jpg
+banner: https://plantcode.blog/frontend/why-the-composition-api-exists/why-the-compositon-api-exists.png
 categories: -frontend
 tags:
   - Vue
